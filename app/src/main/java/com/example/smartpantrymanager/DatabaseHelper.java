@@ -18,7 +18,7 @@ import java.util.List;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "pantry.db";
-    private static final int DB_VERSION = 1;
+    private static final int DB_VERSION = 2;
 
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -180,15 +180,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         addRecipe(db, "Chicken Stir-Fry",
                 "1. Slice the chicken, onion and carrots.\n2. Stir-fry the chicken in oil until cooked.\n3. Add vegetables and cook 5 minutes.\n4. Add soy sauce and toss.",
                 "chicken|300|g", "onion|1|pcs", "carrots|2|pcs", "soy sauce|2|tbsp", "oil|1|tbsp");
-        addRecipe(db, "Tuna Mayo Salad",
-                "1. Drain the tuna.\n2. Finely chop the onion.\n3. Mix everything with the mayonnaise and serve on bread or lettuce.",
-                "tuna|1|pcs", "mayonnaise|2|tbsp", "onion|1|pcs");
+        addRecipe(db, "Pap and Spinach",
+                "1. Add boiling water to a pot.\n2. Add 150 g (about 1 cup) of mealie meal and leave it to boil.\n3. Heat the cooking oil in a pan on the stove.\n4. Add the spinach and salt and stir until it is well cooked.\n5. Serve the pap with the spinach.",
+                "mealie meal|150|g", "cooking oil|2|tbsp", "salt|1|tsp", "spinach|200|g");
+
         addRecipe(db, "Cheese Toastie",
                 "1. Butter the outside of the bread slices.\n2. Place cheese between them.\n3. Toast in a pan for 3 minutes per side.",
                 "bread|2|pcs", "cheese|60|g", "butter|10|g");
-        addRecipe(db, "Vegetable Soup",
-                "1. Dice the carrots, potatoes and onion.\n2. Simmer in the stock for 25 minutes.\n3. Season with salt and blend if desired.",
-                "carrots|2|pcs", "potatoes|2|pcs", "onion|1|pcs", "vegetable stock|500|ml", "salt|1|tsp");
+        addRecipe(db, "Coleslaw Salad",
+                "1. Shred the cabbage and grate the carrots.\n2. Add the cabbage, carrots and mayonnaise to a bowl.\n3. Mix everything together until well combined.\n4. Serve.",
+                "cabbage|200|g", "mayonnaise|3|tbsp", "carrots|2|pcs");
         addRecipe(db, "Banana Smoothie",
                 "1. Peel the bananas.\n2. Blend with milk and honey until smooth.\n3. Serve cold.",
                 "bananas|2|pcs", "milk|250|ml", "honey|1|tbsp");
@@ -198,17 +199,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         addRecipe(db, "Creamy Porridge",
                 "1. Combine oats and milk in a pot.\n2. Cook on medium heat for 5 minutes, stirring.\n3. Sweeten with sugar and serve.",
                 "oats|80|g", "milk|300|ml", "sugar|1|tbsp");
-        addRecipe(db, "Bean Chilli",
-                "1. Fry the chopped onion in oil.\n2. Add chilli powder, tomatoes and beans.\n3. Simmer for 20 minutes.",
-                "beans|400|g", "tomatoes|3|pcs", "onion|1|pcs", "chilli powder|1|tsp", "oil|1|tbsp");
+        addRecipe(db, "Scones",
+                "1. Add the flour, baking powder, sugar, salt and cooking oil to a bowl.\n2. Stir all the ingredients together.\n3. Add some lukewarm water a little at a time, keeping the dough strong and firm.\n4. Shape the dough into rounds and bake until golden brown.",
+                "flour|250|g", "baking powder|2|tsp", "sugar|1|tbsp", "salt|1|tsp", "cooking oil|2|tbsp");
+
         addRecipe(db, "French Toast",
                 "1. Whisk eggs, milk and sugar.\n2. Dip the bread slices in the mixture.\n3. Fry in a pan until golden on both sides.",
                 "bread|4|pcs", "eggs|2|pcs", "milk|100|ml", "sugar|1|tbsp");
         addRecipe(db, "Loaded Baked Potatoes",
                 "1. Prick the potatoes and bake at 200C for 60 minutes.\n2. Split open and add butter, salt and grated cheese.\n3. Return to the oven for 5 minutes.",
                 "potatoes|4|pcs", "butter|30|g", "salt|1|tsp", "cheese|50|g");
-        addRecipe(db, "Simple Guacamole",
-                "1. Mash the avocados.\n2. Stir in chopped tomato, onion, lemon juice and salt.\n3. Serve with bread.",
-                "avocados|2|pcs", "lemon|1|pcs", "tomatoes|1|pcs", "onion|1|pcs", "salt|1|tsp");
+        addRecipe(db, "Malva Pudding",
+                "1. Mix the flour, sugar, egg, butter and apricot jam into a smooth sponge batter.\n2. Pour the batter into a baking dish and bake in the oven until golden and cooked through.\n3. While it bakes, heat the cream, butter and sugar on the stove to make the sauce.\n4. Pour the hot sauce over the pudding as soon as it comes out of the oven, so the sponge soaks it up.\n5. Serve warm.",
+                "flour|250|g", "sugar|200|g", "eggs|1|pcs", "butter|100|g", "apricot jam|1|tbsp", "cream|250|ml");
     }
 }
