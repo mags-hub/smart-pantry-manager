@@ -67,6 +67,7 @@ public class AddEditItemActivity extends AppCompatActivity {
 
     private void save() {
         String name = etName.getText().toString().trim();
+        name = name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
         String qtyText = etQty.getText().toString().trim();
         String unit = spUnit.getSelectedItem().toString();
         String expiry = etExpiry.getText().toString().trim();
